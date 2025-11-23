@@ -8,13 +8,13 @@ A modern job portal web application built with **Next.js**, **TypeScript**, **Pr
 
 - [Features](#features)  
 - [Tech Stack](#tech-stack)  
-- [Installation](#installation)  
+<!-- - [Installation](#installation)  
 - [Environment Variables](#environment-variables)  
 - [Database Setup](#database-setup)  
 - [Running the App](#running-the-app)  
 - [Folder Structure](#folder-structure)  
 - [Screenshots](#screenshots)  
-- [License](#license)  
+- [License](#license)   -->
 
 ---
 
