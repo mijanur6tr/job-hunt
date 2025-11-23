@@ -2,10 +2,16 @@ import { auth } from "@/auth";
 import DashboardTop from "@/component/DashboardTop";
 import { prisma } from "@/lib/prisma";
 import { formatDistanceToNow } from "date-fns";
+// import { SearchParams } from "next/dist/server/request/search-params";
 import Link from "next/link";
 
-export default async function Dashboard() {
+export default async function Dashboard(
+  // {searchParams}:{searchParams:{[key:string]: string | undefined | string[]}}
+) {
   const session = await auth();
+
+  // const limit = 4;
+  // const page = Number(searchParams.page);
 
   const [application, postedJobs] = await Promise.all([
     // Jobs you applied to
@@ -18,6 +24,8 @@ export default async function Dashboard() {
           },
         },
       },
+      // skip:(page-1)*limit,
+      // take:limit,
       orderBy: { appliedAt: "desc" },
     }),
     // Jobs posted by you
@@ -30,6 +38,8 @@ export default async function Dashboard() {
           },
         },
       },
+    // skip: (page - 1) * limit,
+    // take: limit,
       orderBy: { postedAt: "desc" },
     }),
   ]);
