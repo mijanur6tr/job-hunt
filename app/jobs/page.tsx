@@ -1,7 +1,6 @@
 import JobsSearchForm from "@/component/JobsSearchForm";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export default async function JobsPage({
   searchParams,

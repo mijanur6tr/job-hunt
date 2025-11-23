@@ -45,8 +45,8 @@ export default function JobPostPage() {
       toast.success(result.message);
       form.reset();
       route.push("/jobs");
-    } catch (err: any) {
-      toast.error(err.message || "Error");
+    } catch (err) {
+      toast.error("Error");
     } finally {
       setLoading(false); 
     }

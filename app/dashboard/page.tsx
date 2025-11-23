@@ -58,7 +58,7 @@ export default async function Dashboard(
           </h2>
           {postedJobs.length === 0 ? (
             <p className="text-gray-500 text-center md:text-left">
-              You haven't posted any jobs yet.
+              You have no posted jobs.
             </p>
           ) : (
             <div className="space-y-4">
@@ -98,7 +98,7 @@ export default async function Dashboard(
           </h2>
           {application.length === 0 ? (
             <p className="text-gray-500 text-center md:text-left">
-              You haven't applied to any jobs yet.
+              You have not applied to any jobs yet.
             </p>
           ) : (
             <div className="space-y-4">
