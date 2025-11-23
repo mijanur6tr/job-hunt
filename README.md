@@ -1,6 +1,6 @@
 # Job Hunt Website
 
-A modern job portal web application built with **Next.js**, **TypeScript**, **Prisma**, and **Neon** (PostgreSQL). This platform allows users to search for jobs, apply for them, and post jobs if they are employers.  
+A modern job portal web application built with **Next.js**, **TypeScript**, **Prisma**, and **Neon** (PostgreSQL). This platform allows users to search for jobs, apply for them, and post the jobs if they are employers.  
 
 ---
 
