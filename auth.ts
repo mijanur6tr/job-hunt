@@ -7,7 +7,7 @@ import {prisma} from "@/lib/prisma"
 export const runtime = "nodejs";
 
 // const prisma = new PrismaClient();
-export const {auth,handlers,signIn,signOut} = NextAuth({
+export const { auth, handlers } = NextAuth({
     session:{
         strategy:"jwt",
     },
