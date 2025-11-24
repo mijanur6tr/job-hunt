@@ -4,6 +4,7 @@ import {PrismaAdapter} from "@auth/prisma-adapter";
 import {prisma} from "@/lib/prisma"
 // import { PrismaClient } from "./app/generated/prisma/client";
 
+export const runtime = "nodejs";
 
 // const prisma = new PrismaClient();
 export const {auth,handlers,signIn,signOut} = NextAuth({
