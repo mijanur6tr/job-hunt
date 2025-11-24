@@ -2,6 +2,7 @@ import { auth } from "@/auth";
 import DashboardTop from "@/component/DashboardTop";
 import { prisma } from "@/lib/prisma";
 import { formatDistanceToNow } from "date-fns";
+import { redirect } from "next/navigation";
 // import { SearchParams } from "next/dist/server/request/search-params";
 import Link from "next/link";
 
@@ -9,6 +10,11 @@ export default async function Dashboard(
   // {searchParams}:{searchParams:{[key:string]: string | undefined | string[]}}
 ) {
   const session = await auth();
+
+    // If not logged in, redirect to signin
+  if (!session?.user) {
+    redirect("/auth/signin");
+  }
 
   // const limit = 4;
   // const page = Number(searchParams.page);
