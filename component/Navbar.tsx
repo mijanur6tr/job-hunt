@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import logo from "../public/logo.png"
 
 export default function Navbar() {
   const { data: session, status } = useSession();
@@ -17,7 +18,7 @@ export default function Navbar() {
 
         {/* LEFT — Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
+          <Image src={logo} alt="Logo" width={32} height={32} />
           <span className="text-xl text-[#0078D4] font-semibold">Job Hunt</span>
         </Link>
 
