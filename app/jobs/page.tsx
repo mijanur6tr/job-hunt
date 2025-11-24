@@ -2,11 +2,10 @@ import JobsSearchForm from "@/component/JobsSearchForm";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 
-export default async function JobsPage({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | undefined | string[] };
+export default async function JobsPage(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const searchParams = await props.searchParams;
   const limit = 3;
   const page = Number(searchParams.page) || 1;
 
@@ -103,7 +102,7 @@ export default async function JobsPage({
         ))}
       </div>
 
-      {/* Pagination (in the same file) */}
+      {/* Pagination*/}
       <div className="flex justify-center items-center gap-3 mt-6">
 
         {/* Previous */}
